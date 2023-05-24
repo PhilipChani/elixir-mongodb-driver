@@ -25,13 +25,13 @@ defmodule Mongodb.Mixfile do
     [
       applications: applications(Mix.env()),
       env: [],
-      extra_applications: [:crypto, :ssl, :eex],
+      extra_applications: [:crypto, :ssl, :eex, :db_connection],
       mod: {Mongo.App, []}
     ]
   end
 
   def applications(:test), do: [:logger, :db_connection]
-  def applications(_), do: [:logger, :db_connection]
+  def applications(_), do: [:logger]
 
   defp deps do
     [
