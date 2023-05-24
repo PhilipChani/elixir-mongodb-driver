@@ -30,8 +30,8 @@ defmodule Mongodb.Mixfile do
     ]
   end
 
-  def applications(:test), do: [:logger, :connection, :db_connection]
-  def applications(_), do: [:logger, :connection, :db_connection]
+  def applications(:test), do: [:logger, :db_connection]
+  def applications(_), do: [:logger, :db_connection]
 
   defp deps do
     [
